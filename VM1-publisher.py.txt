@@ -1,0 +1,10 @@
+#Python3
+
+import time
+import paho.mqtt.client as mqtt
+
+mqttcl = mqtt.Client()
+for i in range(100000):
+	mqttcl.connect(host="192.168.5.128", port=1883, keepalive=10, bind_addres="")
+	mqttcl.publish("topics/time", f"Now is {time.ctime()}")
+	time.sleep(0.1)

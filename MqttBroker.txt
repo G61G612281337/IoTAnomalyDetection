@@ -1,0 +1,5 @@
+#Ubuntu terminal
+
+sudo service mosquitto start
+#psswrd
+mosquitto -c /etc/mosquitto/config -v
